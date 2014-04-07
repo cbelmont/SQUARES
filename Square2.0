@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/xeyot/9/edit
+-->
+<head>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+  <button id="Charles">Animate</>
+<script>
+var height = 200;
+var width = 200;
+var squarehead=25;
+var paper= Raphael(100,100,height,width);
+var Henry = [];
+var new_width=[];
+var new_height=[];
+var imageurl="http://static.eclypsia.com/public/upload/cke/LoL%20-%20Splash/Portraits/leesin.jpg";
+for (var Charles=0; Charles<squarehead; Charles=Charles+1) {
+    Henry[Charles]=paper.image(imageurl,10,170,32,32);
+  }
+
+function jazz() {
+  for (var amazing=0; amazing<squarehead;amazing=amazing+1){
+   new_height[amazing]=Math.random()*height;
+   new_width[amazing]=Math.random()*width;
+  } 
+ 
+  for (var amazed=0;amazed<squarehead;amazed=amazed+1){
+    
+ 
+    Henry[amazed].animate({x:new_width[amazed], y:new_height[amazed]},1000);
+  }
+  Henry[squarehead-1].animate({x:new_width[squarehead-1], y:new_height[squarehead-1]}, 1000,jazz);
+}
+$("#Charles").click(jazz);
+</script>
+</body>
+</html>
