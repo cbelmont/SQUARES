@@ -1,0 +1,4 @@
+SQUARES
+=======
+
+Jsbin
